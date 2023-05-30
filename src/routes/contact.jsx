@@ -8,15 +8,7 @@ export async function loader({ params }) {
 
 export default function Contact() {
   const { contact } = useLoaderData();
-
-  //   const contact = {
-  //     first: "Your",
-  //     last: "Name",
-  //     avatar: "https://placekitten.com/g/200/200",
-  //     twitter: "your_handle",
-  //     notes: "Some notes",
-  //     favorite: true,
-  //   };
+  console.log("contactOut ; ", contact);
 
   return (
     <div id="contact">
@@ -38,11 +30,7 @@ export default function Contact() {
 
         {contact.twitter && (
           <p>
-            <a
-              target="_blank"
-              href={`https://twitter.com/${contact.twitter}`}
-              rel="noreferrer"
-            >
+            <a target="_blank" href={`https://twitter.com/${contact.twitter}`}>
               {contact.twitter}
             </a>
           </p>
